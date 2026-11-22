@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
+  <meta name="theme-color" content="#FAF8F3" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#161717" media="(prefers-color-scheme: dark)" />
+  <title>Tobi Fasipe — Head of Account Management | 360° Commercial &amp; Operations Leader</title>
+  <meta name="description" content="Oluwatobi (Tobi) Fasipe — 360° Head of Account Management candidate. 180%+ YoY revenue growth, 110% QoQ monetization high at Glovo, 600 to 25,000+ daily deliveries at Chowdeck, 99% retention at Stitch, $700K+/mo protected at Paystack. UK Global Talent Visa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #FAF8F3;
+      --paper-2: #F0EAE0;
+      --surface: #FFFFFF;
+      --ink: #161717;
+      --ink-2: #3A3834;
+      --muted: #6C6860;
+      --line: #E3DDD0;
+      --yellow: #F2CC38;
+      --yellow-mark: rgba(242, 204, 56, 0.40);
+      --green: #008F72;
+      --green-soft: rgba(0, 143, 114, 0.10);
+      --coral: #D63F34;
+      --coral-soft: rgba(214, 63, 52, 0.10);
+      --amber: #A67000;
+      --amber-soft: rgba(242, 204, 56, 0.22);
+      --glass: rgba(250, 248, 243, 0.80);
+      --glass-border: rgba(22, 23, 23, 0.08);
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+      --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+      --ui: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, sans-serif;
+      --display: "Montserrat", -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+      --radius: 20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-text-size-adjust: 100%;
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--ui);
+      font-size: 16px;
+      line-height: 1.58;
+      background: var(--paper);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      font-feature-settings: "cv11", "ss01";
+    }
+
+    button, a, [role="button"] {
+      touch-action: manipulation;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      font-family: inherit;
+    }
+
+    .tabular { font-variant-numeric: tabular-nums; }
+
+    /* Background push-back when sheet opens */
+    .page-shell {
+      transition: transform 340ms var(--ease-drawer), filter 340ms var(--ease-drawer);
+      transform-origin: center top;
+      will-change: transform;
+      min-height: 100svh;
+    }
+    body.sheet-open { overflow: hidden; }
+    body.sheet-open .page-shell {
+      transform: scale(0.985) translateY(6px);
+      filter: brightness(0.94);
+    }
+
+    /* Translucent Floating macOS Toolbar + scroll-edge mask */
+    .topbar-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      padding: calc(12px + env(safe-area-inset-top, 0px)) 20px 14px;
+      background: linear-gradient(180deg, rgba(250, 248, 243, 0.94) 0%, rgba(250, 248, 243, 0.68) 76%, rgba(250, 248, 243, 0) 100%);
+      pointer-events: none;
+    }
+
+    .topbar {
+      pointer-events: auto;
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 8px 10px 8px 18px;
+      border-radius: 999px;
+      background: var(--glass);
+      backdrop-filter: blur(22px) saturate(180%);
+      -webkit-backdrop-filter: blur(22px) saturate(180%);
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 8px 28px rgba(22, 23, 23, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+    }
+
+    .brand {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .brand span { color: var(--green); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-a {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 6px 11px;
+      border-radius: 999px;
+      transition: color 140ms ease, background 140ms ease, transform 100ms var(--ease-out);
+      white-space: nowrap;
+    }
+    .nav-a:active { transform: scale(0.96); }
+
+    .topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      border: 0;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 9px 15px;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: transform 110ms var(--ease-out), background 160ms ease, border-color 160ms ease;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-primary { background: var(--ink); color: var(--paper); }
+    .btn-outline { background: var(--surface); color: var(--ink); border: 1px solid var(--line); }
+    .btn-ghost { background: transparent; color: var(--ink-2); }
+
+    @media (hover: hover) and (pointer: fine) {
+      .nav-a:hover { color: var(--ink); background: rgba(22, 23, 23, 0.05); }
+      .btn-primary:hover { background: #2B2D2D; }
+      .btn-outline:hover { border-color: var(--ink); }
+      .btn-ghost:hover { background: rgba(22, 23, 23, 0.06); }
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+    .eyebrow.muted { color: var(--muted); }
+
+    mark {
+      background: linear-gradient(180deg, transparent 54%, var(--yellow-mark) 54%, var(--yellow-mark) 94%, transparent 94%);
+      color: inherit;
+      padding: 0 3px;
+      border-radius: 3px;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 58px 0 64px;
+    }
+
+    .status-line {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--mono);
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--green);
+      flex-shrink: 0;
+      box-shadow: 0 0 0 4px rgba(0, 143, 114, 0.16);
+    }
+
+    .hero-h1 {
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: clamp(2.25rem, 5.1vw, 3.95rem);
+      line-height: 1.05;
+      letter-spacing: -0.034em;
+      margin: 0 0 24px;
+      max-width: 22ch;
+      text-wrap: balance;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.32fr 0.68fr;
+      gap: 36px;
+      align-items: end;
+      margin-bottom: 42px;
+    }
+
+    .hero-lede {
+      font-size: clamp(1.04rem, 1.4vw, 1.17rem);
+      line-height: 1.62;
+      color: var(--ink-2);
+      margin: 0;
+      max-width: 60ch;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .snapshot-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+    }
+    .snap-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 13.5px;
+    }
+    .snap-row:first-child { padding-top: 0; }
+    .snap-row:last-child { border-bottom: 0; padding-bottom: 0; }
+    .snap-k {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+    .snap-v { font-weight: 700; text-align: right; color: var(--ink); }
+
+    /* Top 4 Hero Proof Cards */
+    .proof-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .proof-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px 20px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .proof-num {
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: clamp(1.85rem, 3vw, 2.5rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+    }
+    .proof-num.green { color: var(--green); }
+    .proof-num.coral { color: var(--coral); }
+    .proof-num.amber { color: var(--amber); }
+    .proof-label { font-size: 14px; font-weight: 700; line-height: 1.35; margin-bottom: 8px; }
+    .proof-basis { font-family: var(--mono); font-size: 10.5px; color: var(--muted); }
+
+    /* Sections */
+    .section {
+      padding: 80px 0;
+      border-top: 1px solid var(--line);
+    }
+    .sec-head { margin-bottom: 36px; }
+    .sec-h2 {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(1.65rem, 3.2vw, 2.5rem);
+      line-height: 1.12;
+      letter-spacing: -0.028em;
+      margin: 10px 0 12px;
+      max-width: 28ch;
+      text-wrap: balance;
+    }
+    .sec-sub {
+      font-size: 15.5px;
+      color: var(--muted);
+      margin: 0;
+      max-width: 64ch;
+      line-height: 1.6;
+    }
+
+    /* SIGNATURE SECTION: INTERACTIVE 360° OPERATOR MATRIX */
+    .edge-grid {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .pillar-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .pillar-btn {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 36px 1fr auto;
+      align-items: center;
+      gap: 12px;
+      padding: 15px 16px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink);
+      text-align: left;
+      cursor: pointer;
+      transition: transform 120ms var(--ease-out), border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
+    }
+    .pillar-btn:active { transform: scale(0.985); }
+    .pillar-btn.active {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+      box-shadow: 0 12px 30px rgba(22, 23, 23, 0.14);
+    }
+    .pillar-num {
+      font-family: var(--mono);
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--green);
+    }
+    .pillar-btn.active .pillar-num { color: var(--yellow); }
+    .pillar-name { font-weight: 700; font-size: 14.5px; line-height: 1.25; }
+    .pillar-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .pillar-btn.active .pillar-sub { color: rgba(250, 248, 243, 0.72); }
+    .pillar-stat {
+      font-family: var(--mono);
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--green);
+      white-space: nowrap;
+    }
+    .pillar-btn.active .pillar-stat { color: var(--yellow); }
+
+    @media (hover: hover) and (pointer: fine) {
+      .pillar-btn:not(.active):hover { border-color: var(--ink); }
+    }
+
+    .pillar-detail {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 30px 32px;
+      transition: opacity 160ms ease, filter 160ms ease;
+    }
+    .pillar-detail.swapping { opacity: 0.45; filter: blur(2px); }
+
+    .pd-hero {
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: clamp(2rem, 3.6vw, 2.85rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      color: var(--green);
+      margin: 10px 0 8px;
+    }
+    .pd-title {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      margin: 0 0 12px;
+    }
+    .pd-why {
+      font-size: 14.5px;
+      color: var(--ink-2);
+      line-height: 1.62;
+      margin: 0 0 20px;
+      padding: 14px 16px;
+      background: var(--paper);
+      border-left: 3px solid var(--green);
+      border-radius: 0 12px 12px 0;
+    }
+    .pd-list {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 14.5px;
+      color: var(--ink-2);
+      line-height: 1.62;
+    }
+    .pd-list li { margin-bottom: 10px; }
+
+    /* Full-width Glovo-style Statement Band */
+    .statement-band {
+      background: var(--paper-2);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 58px 24px;
+      text-align: center;
+    }
+    .statement-text {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(1.35rem, 2.7vw, 2.15rem);
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+      max-width: 34ch;
+      margin: 0 auto;
+    }
+    .statement-text span { color: var(--green); }
+
+    /* Experience Role Cards with Before->After Bars */
+    .roles-stack { display: flex; flex-direction: column; gap: 20px; }
+    .role-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 28px 30px;
+    }
+    .role-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 32px;
+      align-items: start;
+    }
+    .role-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .role-period { font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+    .role-tag {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: var(--paper-2);
+      color: var(--ink-2);
+    }
+    .role-tag.live { background: var(--green-soft); color: var(--green); }
+    .role-co { font-family: var(--display); font-weight: 800; font-size: clamp(1.35rem, 2.2vw, 1.7rem); letter-spacing: -0.02em; margin: 0 0 4px; }
+    .role-ti { font-size: 14px; font-weight: 700; color: var(--green); margin-bottom: 12px; }
+    .role-hl { font-size: 16.5px; font-weight: 700; line-height: 1.38; margin: 0 0 10px; }
+    .role-bullets { margin: 0 0 18px; padding-left: 18px; font-size: 14.5px; color: var(--ink-2); line-height: 1.58; }
+    .role-bullets li { margin-bottom: 7px; }
+
+    .ba-panel {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px 20px;
+    }
+    .ba-row { margin-bottom: 14px; }
+    .ba-row:last-child { margin-bottom: 0; }
+    .ba-top { display: flex; justify-content: space-between; gap: 10px; font-size: 12.5px; margin-bottom: 5px; }
+    .ba-name { font-weight: 600; }
+    .ba-val { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--green); white-space: nowrap; }
+    .ba-val.coral { color: var(--coral); }
+    .ba-track { height: 7px; border-radius: 999px; background: var(--paper-2); overflow: hidden; }
+    .ba-fill { height: 100%; border-radius: 999px; background: var(--green); }
+    .ba-fill.coral { background: var(--coral); }
+    .ba-sub { font-family: var(--mono); font-size: 10.5px; color: var(--muted); margin-top: 4px; }
+
+    /* Dark Bang Band (Scale & Leadership Proof) */
+    .bang {
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: 28px;
+      padding: 54px 44px;
+      margin: 20px 0;
+    }
+    .bang-h2 {
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: clamp(1.7rem, 3.4vw, 2.65rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin: 10px 0 32px;
+      max-width: 24ch;
+    }
+    .bang-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
+      padding-top: 26px;
+      border-top: 1px solid rgba(250, 248, 243, 0.14);
+    }
+    .bang-num {
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: clamp(1.9rem, 3.4vw, 2.85rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      color: var(--yellow);
+      margin-bottom: 8px;
+    }
+    .bang-desc { font-size: 13.5px; color: rgba(250, 248, 243, 0.84); line-height: 1.48; }
+
+    /* 3-Column Leadership & External Orchestration + SVG Scale Chart */
+    .three-col {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .info-title {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 17px;
+      margin: 10px 0 10px;
+      letter-spacing: -0.015em;
+    }
+    .info-body { font-size: 14px; color: var(--ink-2); line-height: 1.6; margin: 0; }
+
+    /* Freeing Team Time / Automation Grid */
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .auto-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 24px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+      cursor: pointer;
+      transition: transform 140ms var(--ease-out), border-color 160ms ease;
+    }
+    .auto-card:active { transform: scale(0.985); }
+    @media (hover: hover) and (pointer: fine) {
+      .auto-card:hover { border-color: var(--ink); transform: translateY(-2px); }
+    }
+    .auto-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; margin-bottom: 10px; }
+    .auto-metric { font-family: var(--display); font-weight: 900; font-size: 26px; color: var(--green); letter-spacing: -0.03em; line-height: 1; text-align: right; }
+    .auto-sub { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-top: 4px; text-align: right; }
+    .auto-title { font-family: var(--display); font-weight: 800; font-size: 17.5px; margin: 6px 0 8px; }
+    .auto-desc { font-size: 14px; color: var(--ink-2); line-height: 1.56; margin: 0 0 14px; }
+    .auto-foot { display: flex; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 11px; color: var(--muted); }
+
+    /* Essays */
+    .essays-list { border-top: 1px solid var(--line); }
+    .essay-row {
+      width: 100%;
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      padding: 20px 6px;
+      display: grid;
+      grid-template-columns: 40px 1fr auto;
+      gap: 16px;
+      align-items: center;
+      text-align: left;
+      cursor: pointer;
+      transition: padding-left 200ms var(--ease-out), background 140ms ease;
+    }
+    .essay-row:active { transform: scale(0.99); }
+    @media (hover: hover) and (pointer: fine) {
+      .essay-row:hover { padding-left: 14px; background: rgba(22, 23, 23, 0.025); }
+    }
+
+    /* Contact */
+    .contact-rows { border-top: 1px solid var(--line); margin-top: 24px; }
+    .contact-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 4px;
+      border-bottom: 1px solid var(--line);
+      text-decoration: none;
+      color: var(--ink);
+      transition: padding-left 200ms var(--ease-out), color 140ms ease;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .contact-row:hover { padding-left: 12px; color: var(--green); }
+    }
+    .contact-val { font-family: var(--display); font-weight: 800; font-size: clamp(1.2rem, 2.3vw, 1.65rem); letter-spacing: -0.02em; margin-top: 4px; }
+
+    .footer {
+      padding: 36px 0 calc(42px + env(safe-area-inset-bottom, 0px));
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: var(--muted);
+    }
+
+    /* Interruptible Draggable macOS / iOS Sheet */
+    .sheet-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 80;
+      background: rgba(22, 23, 23, 0.45);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 220ms ease;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .sheet-backdrop.open { opacity: 1; pointer-events: auto; }
+    .sheet {
+      width: 100%;
+      max-width: 760px;
+      max-height: 88dvh;
+      background: var(--paper);
+      border-radius: 26px 26px 0 0;
+      box-shadow: 0 -18px 60px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      transform: translateY(100%);
+      transition: transform 320ms var(--ease-drawer);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    .sheet-backdrop.open .sheet { transform: translateY(0); }
+    .sheet.dragging { transition: none; }
+    @media (min-width: 820px) {
+      .sheet-backdrop { align-items: center; padding: 24px; }
+      .sheet { border-radius: 24px; transform: translateY(20px) scale(0.96); opacity: 0; transition: transform 280ms var(--ease-out), opacity 200ms ease; }
+      .sheet-backdrop.open .sheet { transform: translateY(0) scale(1); opacity: 1; }
+    }
+    .sheet-head {
+      padding: 12px 24px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+      touch-action: pan-x;
+      cursor: grab;
+    }
+    .sheet-pill { width: 40px; height: 5px; border-radius: 999px; background: rgba(22, 23, 23, 0.18); margin: 0 auto; }
+    @media (min-width: 820px) { .sheet-pill { display: none; } }
+    .sheet-close {
+      border: 0;
+      background: rgba(22, 23, 23, 0.08);
+      color: var(--ink);
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .sheet-body { padding: 26px 28px 34px; overflow-y: auto; overscroll-behavior: contain; }
+    .essay-prose p { font-size: 15.5px; line-height: 1.74; color: var(--ink-2); margin: 0 0 15px; }
+    .essay-prose h4 { font-family: var(--display); font-weight: 800; font-size: 18px; margin: 24px 0 8px; }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: calc(22px + env(safe-area-inset-bottom, 0px));
+      transform: translate(-50%, 16px) scale(0.96);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 120;
+      background: rgba(22, 23, 23, 0.92);
+      color: var(--paper);
+      padding: 11px 18px;
+      border-radius: 999px;
+      font-size: 13.5px;
+      font-weight: 600;
+      transition: transform 220ms var(--ease-out), opacity 180ms ease;
+    }
+    .toast.show { opacity: 1; transform: translate(-50%, 0) scale(1); }
+
+    @media (max-width: 960px) {
+      .hero-grid, .edge-grid, .role-grid { grid-template-columns: 1fr; }
+      .proof-strip, .bang-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .three-col, .two-col { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      .nav-links { display: none; }
+      .hero { padding: 34px 0 48px; }
+      .section { padding: 56px 0; }
+      .role-card, .pillar-detail { padding: 22px 20px; }
+      .bang { padding: 36px 24px; border-radius: 22px; }
+      .essay-row { grid-template-columns: 30px 1fr; }
+      .essay-row span:last-child { grid-column: 2; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition-duration: 120ms !important; }
+      .page-shell, .sheet { transform: none !important; }
+    }
+    @media (prefers-reduced-transparency: reduce) {
+      .topbar { background: var(--paper); backdrop-filter: none; -webkit-backdrop-filter: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <!-- Floating Translucent macOS Toolbar -->
+    <div class="topbar-wrap">
+      <header class="topbar" role="banner">
+        <a href="#top" class="brand">Tobi Fasipe<span>.</span></a>
+
+        <nav class="nav-links" aria-label="Primary Navigation">
+          <a class="nav-a" href="#edge">360° Edge</a>
+          <a class="nav-a" href="#track-record">AM Track Record</a>
+          <a class="nav-a" href="#leadership">Teams &amp; Scale</a>
+          <a class="nav-a" href="#automation">Freeing AM Time</a>
+          <a class="nav-a" href="#essays">Essays</a>
+        </nav>
+
+        <div class="topbar-actions">
+          <button class="btn btn-ghost" id="copyPitchBtn" type="button">Copy Pitch</button>
+          <a class="btn btn-primary" href="../assets/cv-head-of-am.html" target="_blank" rel="noopener">Head of AM CV</a>
+        </div>
+      </header>
+    </div>
+
+    <main id="top" class="container">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="status-line">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Target Role: Head of Account Management (SMB / Commercial / Partner) · London &amp; Lagos · UK Global Talent Visa</span>
+        </div>
+
+        <h1 class="hero-h1">
+          The 360° Head of Account Management who <mark>turns partner portfolios into compounding revenue.</mark>
+        </h1>
+
+        <div class="hero-grid">
+          <div>
+            <p class="hero-lede">
+              Most Account Management leaders only manage calls and decks. I bring <strong>8+ years across Glovo (Delivery Hero), Chowdeck, Stitch, Paystack (Stripe), and management consulting</strong> — combining commercial monetization ownership, 0→1 operations, product management, manager-of-managers leadership, and custom AI tooling that frees Account Managers from manual busywork.
+            </p>
+            <div class="hero-ctas">
+              <a class="btn btn-primary" href="#contact">Discuss a Head of AM Mandate</a>
+              <a class="btn btn-outline" href="../assets/cv-head-of-am.html" target="_blank" rel="noopener">Open Tailored Head of AM CV</a>
+              <a class="btn btn-ghost" href="#edge">Inspect the 360° Edge ↓</a>
+            </div>
+          </div>
+
+          <aside class="snapshot-card" aria-label="Head of AM Mandate Fit">
+            <div class="snap-row">
+              <span class="snap-k">Current Role</span>
+              <span class="snap-v">Commercial Mgr (SMB) + Partner Ops · Glovo</span>
+            </div>
+            <div class="snap-row">
+              <span class="snap-k">Portfolio Scale</span>
+              <span class="snap-v">4,000+ SMB / 5,000+ Partner Network</span>
+            </div>
+            <div class="snap-row">
+              <span class="snap-k">Team Leadership</span>
+              <span class="snap-v">20+ Orgs · Manager of Managers</span>
+            </div>
+            <div class="snap-row">
+              <span class="snap-k">UK Mobility</span>
+              <span class="snap-v">UK Global Talent Visa (No Sponsorship)</span>
+            </div>
+          </aside>
+        </div>
+
+        <!-- 4 Headline Proof Cards -->
+        <div class="proof-strip">
+          <div class="proof-card">
+            <div>
+              <div class="proof-num tabular green">180%+</div>
+              <div class="proof-label">Year-on-year revenue growth delivered</div>
+            </div>
+            <div class="proof-basis">Commercial &amp; monetization leadership · 110% QoQ ATH at Glovo</div>
+          </div>
+          <div class="proof-card">
+            <div>
+              <div class="proof-num tabular green">600→25K+</div>
+              <div class="proof-label">Daily deliveries scaled in under 18 months</div>
+            </div>
+            <div class="proof-basis">Chowdeck Executive Team · 20+ org incl. Team Leads</div>
+          </div>
+          <div class="proof-card">
+            <div>
+              <div class="proof-num tabular coral">90%+</div>
+              <div class="proof-label">Reduction in rider recruitment cost at scale</div>
+            </div>
+            <div class="proof-basis">20× onboarding throughput · $900K+ annualised savings</div>
+          </div>
+          <div class="proof-card">
+            <div>
+              <div class="proof-num tabular amber">20–40h/wk</div>
+              <div class="proof-label">Manual AM time freed per Account Manager</div>
+            </div>
+            <div class="proof-basis">Custom AI AM Assistant · Salesforce, Looker &amp; SQL</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 01: THE 360° DIFFERENCE -->
+      <section class="section" id="edge">
+        <div class="sec-head">
+          <div class="eyebrow">01 — Why I Am Different</div>
+          <h2 class="sec-h2">Most AM leaders run relationship calls. <mark>I operate 360° across the whole P&amp;L.</mark></h2>
+          <p class="sec-sub">In high-growth marketplaces, fintech, and B2B SaaS, partner churn and stalled revenue are rarely "relationship problems" — they are strategy, process, product, or execution leaks. Select any of the six capabilities below to see the receipts.</p>
+        </div>
+
+        <div class="edge-grid">
+          <div class="pillar-list" id="pillarList" role="tablist" aria-label="360-degree leadership capabilities"></div>
+          <div class="pillar-detail" id="pillarDetail" role="tabpanel"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FULL-WIDTH STATEMENT BAND (glovo-slides-style) -->
+    <section class="statement-band">
+      <p class="statement-text">
+        <span>Account Management breaks when AMs spend 70% of their week firefighting manual ops.</span> I fix the upstream process, automate the reporting, and coach Team Leads so every conversation drives net revenue.
+      </p>
+    </section>
+
+    <div class="container">
+      <!-- SECTION 02: COMMERCIAL & AM TRACK RECORD -->
+      <section class="section" id="track-record">
+        <div class="sec-head">
+          <div class="eyebrow">02 — Commercial &amp; Account Management Track Record</div>
+          <h2 class="sec-h2">Revenue ownership, partner enablement, and <mark>operational durability across four tech leaders.</mark></h2>
+          <p class="sec-sub">Ordered by relevance to Head of Account Management mandates — starting with my dual SMB Commercial &amp; Partner Ops role at Glovo, then Chowdeck's 0→1 hypergrowth scale, Stitch's enterprise SaaS/API book, and Paystack's multi-market merchant protection &amp; product work.</p>
+        </div>
+
+        <div class="roles-stack" id="amRolesStack"></div>
+      </section>
+
+      <!-- DARK "BANG" BAND -->
+      <section class="bang" aria-label="Manager-of-Managers Scale Proof">
+        <div class="eyebrow" style="color:var(--yellow);">Hypergrowth Scale &amp; Revenue Proof</div>
+        <h2 class="bang-h2">Built for multi-thousand SMB books, layered teams, and aggressive commercial targets.</h2>
+        <div class="bang-grid">
+          <div>
+            <div class="bang-num tabular">110%</div>
+            <div class="bang-desc">QoQ monetization target lift in Q1 at Glovo SMB — team all-time high — alongside 180%+ YoY revenue growth experience.</div>
+          </div>
+          <div>
+            <div class="bang-num tabular">5,000+</div>
+            <div class="bang-desc">Partner network structured from zero across Glovo Nigeria (#1 fastest-growing Glovo market globally) + 100+ partners trained in Partner Academies.</div>
+          </div>
+          <div>
+            <div class="bang-num tabular">600→25K+</div>
+            <div class="bang-desc">Daily deliveries scaled in under 18 months at Chowdeck while holding 85%–90% 1-hour SLA and cutting recruitment cost 90%+.</div>
+          </div>
+          <div>
+            <div class="bang-num tabular">99%</div>
+            <div class="bang-desc">Enterprise account retention at Stitch ($1M+ book, +5% top-tier expansion) and $700K+/mo merchant revenue protected at Paystack.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 03: TEAMS, MANAGERS-OF-MANAGERS & THIRD-PARTY ALIGNMENT -->
+      <section class="section" id="leadership">
+        <div class="sec-head">
+          <div class="eyebrow">03 — Leading Managers, Cross-Functional Rallying &amp; Third Parties</div>
+          <h2 class="sec-h2">Built 20+ person orgs from scratch and <mark>rallied internal and external partners around one goal.</mark></h2>
+          <p class="sec-sub">A Head of Account Management doesn't just manage individual contributors — you coach Team Leads, align Sales/Ops/Product/Finance, and hold BPOs and external vendors to commercial SLAs.</p>
+        </div>
+
+        <div class="three-col">
+          <div class="info-card">
+            <div class="eyebrow">Manager of Managers</div>
+            <div class="info-title">20+ Person Teams with Reporting Team Leads</div>
+            <p class="info-body">Built Chowdeck's supply-side operations org from zero to 20+ people with Team Leads reporting directly to me across sourcing, onboarding, training, and retention — plus built Partner Ops &amp; Account Management teams from zero at Glovo with structured weekly pipeline reviews and 1-on-1 coaching cadences.</p>
+          </div>
+          <div class="info-card">
+            <div class="eyebrow">Cross-Functional Alignment</div>
+            <div class="info-title">Rallying Product, Tech, Sales &amp; Ops Around One Goal</div>
+            <p class="info-body">Translated frontline partner signals into <strong>40+ Product &amp; Engineering releases</strong> at Paystack, launched Paystack's 2021 South Africa market expansion across Legal/Compliance/Eng/Ops, and united Commercial, Marketing, Logistics, and Tech to make Nigeria Glovo's #1 fastest-growing market globally.</p>
+          </div>
+          <div class="info-card">
+            <div class="eyebrow">Third-Party &amp; BPO Coordination</div>
+            <div class="info-title">Coordinating External Partners to Hit Company Goals</div>
+            <p class="info-body">Managed <strong>10 outsourced BPO agents</strong> alongside in-house specialists across NG, GH, and ZA at Paystack (owning SLAs, QA, and escalation standards); negotiated external vendors and <strong>20 billboards</strong> for Chowdeck's first OOH campaign; coordinated external partner financing and 5,000+ merchants at Glovo.</p>
+          </div>
+        </div>
+
+        <!-- Clean Inline SVG Growth Trajectory (glovo-ng-deck direct-labeled restraint) -->
+        <div class="info-card" style="padding:26px 28px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px;margin-bottom:16px;">
+            <div>
+              <div class="eyebrow">Scale Proof · Under 18 Months</div>
+              <div class="info-title" style="margin:6px 0 0;">Daily Delivery Volume Scaled 600 → 25,000+ While Cutting Recruitment Cost 90%+</div>
+            </div>
+            <span class="eyebrow muted">Chowdeck · Jan 2023 – Jul 2024 · 85–90% 1-Hr SLA</span>
+          </div>
+          <svg viewBox="0 0 880 190" style="width:100%;height:auto;display:block;" aria-label="Daily delivery scaling trajectory from 600 to 25,000+ in under 18 months">
+            <defs>
+              <linearGradient id="scaleFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#008F72" stop-opacity="0.22" />
+                <stop offset="100%" stop-color="#008F72" stop-opacity="0.01" />
+              </linearGradient>
+            </defs>
+            <line x1="40" y1="152" x2="840" y2="152" stroke="#E3DDD0" stroke-width="1" />
+            <path d="M 55 148 C 220 144, 340 128, 490 92 C 630 58, 740 34, 825 22 L 825 152 L 55 152 Z" fill="url(#scaleFill)" />
+            <path d="M 55 148 C 220 144, 340 128, 490 92 C 630 58, 740 34, 825 22" fill="none" stroke="#008F72" stroke-width="3.5" stroke-linecap="round" />
+            <circle cx="55" cy="148" r="5" fill="#6C6860" />
+            <circle cx="490" cy="92" r="5" fill="#008F72" />
+            <circle cx="825" cy="22" r="6.5" fill="#008F72" />
+            <text x="55" y="135" fill="#6C6860" font-family="JetBrains Mono" font-size="12" font-weight="600">600 / day</text>
+            <text x="55" y="172" fill="#6C6860" font-family="JetBrains Mono" font-size="11">Month 1 (80 riders)</text>
+            <text x="490" y="78" text-anchor="middle" fill="#161717" font-family="JetBrains Mono" font-size="12" font-weight="600">20× onboarding workflow + 90%+ cost cut</text>
+            <text x="490" y="172" text-anchor="middle" fill="#6C6860" font-family="JetBrains Mono" font-size="11">Month 9 · Team Leads &amp; SOPs in place</text>
+            <text x="825" y="15" text-anchor="end" fill="#008F72" font-family="Montserrat" font-size="15" font-weight="900">25,000+ / day</text>
+            <text x="825" y="172" text-anchor="end" fill="#161717" font-family="JetBrains Mono" font-size="11" font-weight="600">Month 18 (5,000+ riders)</text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- SECTION 04: FREEING TEAM TIME & OUTSOURCING MANUAL WORK -->
+      <section class="section" id="automation">
+        <div class="sec-head">
+          <div class="eyebrow">04 — High-Leverage Account Management Operations</div>
+          <h2 class="sec-h2">How I free Account Managers from <mark>manual, unproductive work.</mark></h2>
+          <p class="sec-sub">In high-volume SMB portfolios (~400–600 partners per AM), headcount alone never scales. I combine custom AI workflows, automated KPI tooling, self-serve enablement, and BPO delegation so Account Managers spend their hours on commercial growth.</p>
+        </div>
+
+        <div class="two-col" id="autoGrid"></div>
+      </section>
+
+      <!-- SECTION 05: WRITING & CREDENTIALS -->
+      <section class="section" id="essays">
+        <div class="sec-head">
+          <div class="eyebrow">05 — How I Think &amp; Lead</div>
+          <h2 class="sec-h2">Five short essays on <mark>scale, risk, and leading experts.</mark></h2>
+          <p class="sec-sub">Tap any essay to read in full without leaving the page.</p>
+        </div>
+        <div class="essays-list" id="essaysList"></div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="sec-head" style="margin-bottom:14px;">
+          <div class="eyebrow">06 — Credentials &amp; Direct Contact</div>
+          <h2 class="sec-h2">Hiring a <mark>Head of Account Management</mark> who brings commercial &amp; ops firepower?</h2>
+          <p class="sec-sub">UK Global Talent Visa holder (no sponsorship required). Management Consulting trained (EduBridge Business Challenge &amp; HR Strategy Winner; Antsar Consulting). Angel investor in Chowdeck, GoLemon, Billingrails, and Varsi.</p>
+        </div>
+
+        <div class="contact-rows">
+          <a class="contact-row" href="mailto:fasipetobi@gmail.com">
+            <div>
+              <div class="eyebrow muted">Email</div>
+              <div class="contact-val">fasipetobi@gmail.com</div>
+            </div>
+            <span style="font-size:24px;" aria-hidden="true">↗</span>
+          </a>
+          <a class="contact-row" href="https://www.linkedin.com/in/tobifasipe" target="_blank" rel="noopener">
+            <div>
+              <div class="eyebrow muted">LinkedIn</div>
+              <div class="contact-val">linkedin.com/in/tobifasipe</div>
+            </div>
+            <span style="font-size:24px;" aria-hidden="true">↗</span>
+          </a>
+          <a class="contact-row" href="../assets/cv-head-of-am.html" target="_blank" rel="noopener">
+            <div>
+              <div class="eyebrow muted">Tailored Résumé</div>
+              <div class="contact-val">Open Head of Account Management CV (Print / Save PDF)</div>
+            </div>
+            <span style="font-size:24px;" aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <footer class="footer">
+          <span>© 2026 Oluwatobi Fasipe · London / Lagos · UK Global Talent Visa</span>
+          <a href="../index.html" style="color:var(--muted);text-decoration:none;">← Back to All Website Versions</a>
+        </footer>
+      </section>
+    </div>
+  </div>
+
+  <!-- Interruptible Draggable macOS / iOS Sheet -->
+  <div class="sheet-backdrop" id="sheetBackdrop" aria-hidden="true">
+    <div class="sheet" id="sheet" role="dialog" aria-modal="true">
+      <div class="sheet-head" id="sheetHandle">
+        <span class="eyebrow muted" id="sheetEyebrow">Detail</span>
+        <div class="sheet-pill" aria-hidden="true"></div>
+        <button class="sheet-close" id="sheetClose" aria-label="Close">×</button>
+      </div>
+      <div class="sheet-body" id="sheetBody"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="../shared/data.js"></script>
+  <script>
+    (function () {
+      const D = window.TOBI_DATA;
+
+      // 6 Dimensions of the 360° Head of Account Management
+      const pillars = [
+        {
+          id: "strategy",
+          num: "01",
+          name: "Strategy Formulation & Execution",
+          sub: "Management consulting → P&L commercial plans",
+          stat: "180%+ YoY",
+          hero: "180%+ YoY · 110% QoQ",
+          title: "Management consulting rigour applied directly to commercial account strategy.",
+          why: "Why this makes a stronger Head of AM: Instead of reacting to monthly churn, I segment portfolios by revenue potential, model pricing and ad-take-rate levers, and turn board targets into weekly AM execution cadences.",
+          receipts: [
+            "<strong>Glovo Nigeria (SMB Commercial):</strong> Owns SMB pricing, partner economics, segmentation frameworks, and H1/Q4 growth plans — delivering a <strong>110% QoQ increase in monetization targets</strong> (team all-time high) and growing SMB advertising SAIDs from 422 to 1,056.",
+            "<strong>Revenue Acceleration:</strong> Track record driving <strong>180%+ year-on-year revenue growth</strong> by pairing commercial negotiation with operational levers.",
+            "<strong>Management Consulting Foundation:</strong> Research Analyst at Antsar Consulting (market-entry strategies, financial models, 5+ business models &amp; pitch decks across financial services, FMCG, and media) and EduBridge Academy Management Consulting Programme — Winner of both the Business Challenge and HR Strategy Exercise."
+          ]
+        },
+        {
+          id: "operations",
+          num: "02",
+          name: "Operations Depth & Root-Cause Problem Solving",
+          sub: "Fixing the leaks that cause partner churn",
+          stat: "-50%+ canc.",
+          hero: "-50%+ Cancellations",
+          title: "Deep operations background means I diagnose why accounts actually churn — not just what partners say on calls.",
+          why: "Why this makes a stronger Head of AM: In marketplaces and B2B fintech, partners leave over broken fulfilment, slow prep times, and unresolved disputes. Because I have run national Partner Ops and Rider Ops from scratch, I solve the root cause permanently.",
+          receipts: [
+            "<strong>Glovo Nigeria (5,000+ Partners):</strong> Built Partner Operations from zero — cut order cancellations <strong>50%+</strong> (up to 70%+ in targeted cohorts), Dispatch-to-Pickup times <strong>30%+</strong>, lifted Order Ready While Arriving <strong>15%+</strong>, and increased uptime <strong>10%+</strong>.",
+            "<strong>Commercial-Ops Innovation:</strong> Conceived a dark-kitchen concept for a top partner driving <strong>+200% monthly orders</strong> (named Glovo Innovation Champion, Dec 2025) and a bulk-order model cutting prep time <strong>30%+</strong> while volume grew <strong>20%</strong>.",
+            "<strong>Chowdeck Partner Enablement:</strong> Designed kitchen fulfilment playbooks helping top restaurant partners scale from <strong>400 to 1,200+ daily deliveries</strong> without proportional headcount."
+          ]
+        },
+        {
+          id: "process",
+          num: "03",
+          name: "Process Creation & Continuous Improvement",
+          sub: "Paystack · Chowdeck · Glovo (0→1 playbooks)",
+          stat: "-86% loss",
+          hero: "$70K → $10K/mo",
+          title: "Turning undocumented tribal knowledge into legible, auditable operating systems.",
+          why: "Why this makes a stronger Head of AM: Scaling an AM org from 5 to 25+ people fails when performance depends on heroics. I build repeatable SOPs, coverage models, and mandatory data-capture cadences that narrow the gap between top and average performers.",
+          receipts: [
+            "<strong>Paystack (a Stripe Company):</strong> Built Paystack's dispute, chargeback, and refund policies from scratch across Nigeria, Ghana, and South Africa — cutting monthly dispute losses <strong>86% ($70K → $10K)</strong>, protecting <strong>$700K+/month</strong> in merchant revenue, and holding chargebacks <strong>below 0.5%</strong>.",
+            "<strong>Glovo SMB Operating Model:</strong> Architected segmentation rules, account-coverage standards, weekly at-risk portfolio reviews, and clean-healthy retention gates so ~9–10 AMs can manage 4,000+ SMB accounts rigorously.",
+            "<strong>Chowdeck Onboarding Redesign:</strong> Rebuilt the rider acquisition workflow from scratch — increasing daily onboarding throughput <strong>20×</strong> while cutting onboarding cost <strong>90%+</strong> ($900K+ annualised savings)."
+          ]
+        },
+        {
+          id: "product",
+          num: "04",
+          name: "Product Management & Technical Fluency",
+          sub: "Paystack APM + 40+ Product/Eng releases",
+          stat: "40+ shipped",
+          hero: "Offline Terminal + 40+ Releases",
+          title: "I don't just escalate partner complaints to Product — I have shipped products myself.",
+          why: "Why this makes a stronger Head of AM: Great Account Management feeds structured merchant intelligence back into the product roadmap. Having worked as an Associate PM and managed open-banking API implementations, I speak Product and Engineering's language fluently.",
+          receipts: [
+            "<strong>Paystack Associate Product Manager:</strong> Worked as Associate PM on Paystack's offline payments team and launched the <strong>offline payment terminal</strong>.",
+            "<strong>Voice of the Merchant at Scale:</strong> Translated live merchant dispute and UX friction into <strong>40+ shipped improvements</strong> across Paystack's internal support tools and merchant-facing dashboard.",
+            "<strong>Stitch Open-Banking APIs:</strong> Managed technical enterprise API integrations from contract through go-live and adoption across Sales, Engineering, Legal, and Compliance — designing automated self-serve onboarding that cut friction <strong>40%</strong> and drove <strong>2× self-serve signups</strong>."
+          ]
+        },
+        {
+          id: "teams",
+          num: "05",
+          name: "Building 20+ Orgs & Leading Managers",
+          sub: "Manager of managers · 600 → 25,000+ daily orders",
+          stat: "20+ · M-of-M",
+          hero: "600 → 25,000+ / day",
+          title: "Built teams from zero, managed Team Leads directly, and held SLAs through 40× hypergrowth.",
+          why: "Why this makes a stronger Head of AM: Moving from IC manager to Head of AM requires managing through Team Leads, setting crisp KPI governance, and hiring at scale without lowering the bar.",
+          receipts: [
+            "<strong>Chowdeck Executive Team (Reporting to CEO):</strong> Built the supply-side organization from scratch to <strong>20+ people with Team Leads reporting directly to me</strong> across sourcing, onboarding, training, and retention.",
+            "<strong>Hypergrowth Scale &amp; Recruitment:</strong> Scaled Chowdeck from <strong>600 to 25,000+ daily deliveries in under 18 months</strong> (80 → 5,000+ active riders across 8 cities at 85–90% 1-hr SLA), recruiting riders at scale while cutting acquisition cost <strong>over 90%</strong>.",
+            "<strong>Glovo Team Building &amp; Hiring:</strong> Built Partner Ops and SMB Account Management capability from zero — designing structured case-study interviews, competency scorecards, and weekly 1-on-1 coaching trackers."
+          ]
+        },
+        {
+          id: "leverage",
+          num: "06",
+          name: "Third Parties, Automation & Freeing AM Time",
+          sub: "AI tooling · BPOs · Self-serve deflection",
+          stat: "20–40h/wk",
+          hero: "20–40 hrs/wk Saved per AM",
+          title: "Freeing Account Managers from low-value manual admin through AI, self-serve, and BPO delegation.",
+          why: "Why this makes a stronger Head of AM: High-performing AMs burn out when buried in spreadsheets and repetitive support tickets. I build AI tools, automate dashboards, and coordinate BPOs/third parties so AMs spend their time growing revenue.",
+          receipts: [
+            "<strong>AI Account Manager Assistant:</strong> Built an AI assistant drawing on Salesforce, Looker, and SQL that saves each AM <strong>20–40 hours/week</strong> on account diagnostics, reporting prep, and routine partner outreach.",
+            "<strong>Third-Party &amp; BPO Orchestration:</strong> Managed a 13-person hybrid org (3 in-house + <strong>10 outsourced BPO agents</strong>) across NG/GH/ZA at Paystack, negotiated external vendors &amp; <strong>20 billboards</strong> for Chowdeck's first OOH campaign, and partnered with external financial institutions on merchant financing at Glovo.",
+            "<strong>One-to-Many Enablement &amp; Deflection:</strong> Ran <strong>two Partner Academies (100+ partners)</strong> at Glovo, built Paystack's Disputes Help Centre reaching <strong>60,000+ merchants/month</strong>, and automated real-time KPI monitoring across 5,000+ stores in Google Apps Script."
+          ]
+        }
+      ];
+
+      let activePillar = pillars[0].id;
+      const pillarListEl = document.getElementById("pillarList");
+      const pillarDetailEl = document.getElementById("pillarDetail");
+
+      function renderPillarList() {
+        pillarListEl.innerHTML = pillars.map(p => `
+          <button class="pillar-btn ${p.id === activePillar ? "active" : ""}" role="tab" aria-selected="${p.id === activePillar}" data-pillar="${p.id}">
+            <span class="pillar-num">${p.num}</span>
+            <div>
+              <div class="pillar-name">${p.name}</div>
+              <div class="pillar-sub">${p.sub}</div>
+            </div>
+            <span class="pillar-stat tabular">${p.stat}</span>
+          </button>
+        `).join("");
+      }
+
+      function renderPillarDetail(animate) {
+        const p = pillars.find(x => x.id === activePillar) || pillars[0];
+        const paint = () => {
+          pillarDetailEl.innerHTML = `
+            <div class="eyebrow">Dimension ${p.num} / 06 · ${p.name}</div>
+            <div class="pd-hero tabular">${p.hero}</div>
+            <h3 class="pd-title">${p.title}</h3>
+            <div class="pd-why">${p.why}</div>
+            <ul class="pd-list">${p.receipts.map(r => `<li>${r}</li>`).join("")}</ul>
+          `;
+        };
+        if (!animate) { paint(); return; }
+        pillarDetailEl.classList.add("swapping");
+        setTimeout(() => { paint(); pillarDetailEl.classList.remove("swapping"); }, 110);
+      }
+
+      pillarListEl.addEventListener("click", (e) => {
+        const b = e.target.closest("[data-pillar]");
+        if (!b || b.dataset.pillar === activePillar) return;
+        activePillar = b.dataset.pillar;
+        renderPillarList();
+        renderPillarDetail(true);
+      });
+
+      // Head of AM Tailored Experience Roles (grounded in Deliveroo + PartnerAM + Master Resume)
+      const amRoles = [
+        {
+          id: "glovo",
+          period: "Jul 2024 → Present",
+          badge: "CURRENT · DUAL COMMERCIAL + OPS MANDATE",
+          live: true,
+          company: "Glovo (Delivery Hero)",
+          role: "Commercial Manager, SMB (Apr 2026–Present) & Partner Operations Manager (Jul 2024–Present)",
+          headline: "Delivered a 110% QoQ monetization all-time high while owning the operating backbone for 5,000+ partners.",
+          bullets: [
+            "Delivered a <strong>110% QoQ increase in the monetization target</strong> in Q1 (team all-time high) and grew SMB advertising partners 2.5× (422 → 1,056; Ads % fGMV 3.0% → 5.0%), driving Nigeria to Glovo's #1 fastest-growing market globally.",
+            "Designed and ran <strong>two Partner Academies with 100+ partners</strong> on growth strategy, bookkeeping, margin management, and operations excellence — deepening retention and loyalty one-to-many.",
+            "Built the SMB partner operating model (segmentation, SOPs, account-coverage standards, weekly at-risk pipeline reviews) and Partner Operations function from zero across 5,000+ stores — cutting cancellations <strong>50%+</strong> and Dispatch-to-Pickup times <strong>30%+</strong>.",
+            "Conceived a dark-kitchen concept driving <strong>+200% monthly orders</strong> for a strategic partner (Glovo Innovation Champion, Dec 2025) and introduced a bulk-order model cutting prep time <strong>30%+</strong> during +20% volume growth."
+          ],
+          bars: [
+            { name: "Q1 Monetization Target Lift", val: "+110% QoQ (ATH)", pct: 100, sub: "Glovo Nigeria SMB Commercial · 2026" },
+            { name: "SMB Ads Share of Food GMV", val: "3.0% → 5.0%", pct: 92, sub: "Jan–Oct 2026 · 422 → 1,056 advertising SAIDs" },
+            { name: "Partner Order Cancellations", val: "-50%+ cut", pct: 50, coral: true, sub: "5,000+ partner network · Apps Script KPI monitoring" },
+            { name: "Dark-Kitchen Partner Growth", val: "+200% orders", pct: 100, sub: "Innovation Champion Award · Dec 2025" }
+          ]
+        },
+        {
+          id: "chowdeck",
+          period: "Jan 2023 → Jul 2024",
+          badge: "EXECUTIVE TEAM · MANAGER OF MANAGERS",
+          company: "Chowdeck",
+          role: "Head of Rider Operations (Reporting directly to CEO)",
+          headline: "Scaled daily deliveries from 600 to 25,000+ in under 18 months while cutting recruitment cost over 90%.",
+          bullets: [
+            "Built the supply-side organization from scratch to a <strong>20+ person team with Team Leads reporting directly to me</strong> across rider sourcing, onboarding, training, dispatch, and retention.",
+            "Scaled the business from <strong>600 to 25,000+ daily deliveries in under 18 months</strong> (80 → 5,000+ active riders across 8 cities), maintaining 85%–90% 1-hour SLA compliance.",
+            "Redesigned rider recruitment and onboarding workflows — cutting recruitment cost <strong>over 90% ($900K+ annualised savings)</strong> while increasing daily onboarding capacity <strong>20×</strong>.",
+            "Built restaurant partner playbooks scaling top partners from <strong>400 to 1,200+ daily orders</strong>, launched a +50% bad-weather rain bonus and 15%-margin storefront, and coordinated external vendors &amp; 20 billboards for Chowdeck's first OOH campaign."
+          ],
+          bars: [
+            { name: "Daily Delivery Scale", val: "600 → 25,000+", pct: 100, sub: "Under 18 months · 8 Nigerian cities" },
+            { name: "Rider Recruitment Cost Cut", val: "-90%+ ($900K+/yr)", pct: 95, coral: true, sub: "20× daily onboarding workflow throughput" },
+            { name: "Top Restaurant Partner Scale", val: "400 → 1,200+/day", pct: 86, sub: "3× order capacity without proportional headcount" },
+            { name: "1-Hour Delivery SLA Held", val: "85% – 90%", pct: 88, sub: "Sustained across hypergrowth demand spikes" }
+          ]
+        },
+        {
+          id: "stitch",
+          period: "Mar 2022 → Jan 2023",
+          badge: "B2B ENTERPRISE ACCOUNT MANAGEMENT / SAAS",
+          company: "Stitch Money (Open Banking)",
+          role: "Customer Success Manager (promoted from Senior Support Specialist in 5 months)",
+          headline: "Held 99% retention on a $1M+ enterprise fintech book, lifted top-tier revenue 5%, and doubled self-serve signups.",
+          bullets: [
+            "Served as primary strategic advisor and commercial account owner for enterprise fintech and digital commerce clients across a <strong>$1M+/yr book at 99% retention</strong>.",
+            "Delivered strategic consulting to top 15% accounts producing a <strong>5% revenue expansion</strong> while preventing churn, and converted <strong>20 inbound sales leads</strong> into paying customers.",
+            "Owned enterprise implementations end-to-end — coordinating Sales, Product, Engineering, Legal, and Compliance from contract signature through API integration and go-live.",
+            "Designed automated self-serve API onboarding flows that cut onboarding friction <strong>40%</strong> and drove a <strong>2× increase in self-serve signups</strong>."
+          ],
+          bars: [
+            { name: "Enterprise Book Retention", val: "99% retained", pct: 99, sub: "$1M+/yr enterprise B2B open-banking book" },
+            { name: "Self-Serve API Signups", val: "2× growth", pct: 90, sub: "Automated onboarding + developer community" },
+            { name: "Onboarding Friction Cut", val: "-40% faster", pct: 60, coral: true, sub: "Reduced time-to-first-value on regulated APIs" },
+            { name: "Inbound Commercial Wins", val: "20 leads closed", pct: 76, sub: "+5% expansion on top 15% enterprise accounts" }
+          ]
+        },
+        {
+          id: "paystack",
+          period: "Sep 2019 → Feb 2022",
+          badge: "PROCESS CREATION · PRODUCT MGMT · BPO",
+          company: "Paystack (a Stripe Company)",
+          role: "Operations Lead · Chargebacks Team Lead · Associate PM (Offline Payments)",
+          headline: "Built multi-market risk processes from zero, cut losses 86%, managed BPOs, and shipped 40+ product upgrades.",
+          bullets: [
+            "Built Paystack's dispute, refund, and chargeback function from zero across Nigeria, Ghana, and South Africa — protecting <strong>$700K+/month in merchant revenue</strong> and cutting monthly fraud losses <strong>86% ($70K → $10K)</strong>.",
+            "Managed a <strong>13-person hybrid team (3 in-house + 10 outsourced BPO agents)</strong> across three jurisdictions, owning BPO vendor SLAs, QA governance, and escalation standards.",
+            "Worked as <strong>Associate Product Manager</strong> on the offline payments team launching the offline payment terminal, and partnered with Product &amp; Engineering to ship <strong>40+ internal tool &amp; merchant dashboard improvements</strong>.",
+            "Spearheaded operational readiness for Paystack's 2021 South Africa launch and built the Disputes Help Centre from scratch (<strong>60,000+ monthly visits</strong>) plus recurring monthly merchant webinars."
+          ],
+          bars: [
+            { name: "Monthly Merchant Revenue Protected", val: "$700K+ / mo", pct: 96, sub: "Nigeria, Ghana & South Africa · <0.5% CB ratio" },
+            { name: "Monthly Dispute/Fraud Losses", val: "-86% ($70K→$10K)", pct: 86, coral: true, sub: "Proprietary automation + policy redesign" },
+            { name: "Product & Dashboard Upgrades", val: "40+ shipped", pct: 90, sub: "Voice of merchant + Offline Payment Terminal APM" },
+            { name: "Self-Serve Ticket Deflection", val: "60,000+ / mo", pct: 94, sub: "Disputes Help Centre + monthly merchant webinars" }
+          ]
+        }
+      ];
+
+      document.getElementById("amRolesStack").innerHTML = amRoles.map(r => `
+        <article class="role-card">
+          <div class="role-grid">
+            <div>
+              <div class="role-meta">
+                <span class="role-period">${r.period}</span>
+                <span class="role-tag ${r.live ? "live" : ""}">${r.badge}</span>
+              </div>
+              <h3 class="role-co">${r.company}</h3>
+              <div class="role-ti">${r.role}</div>
+              <p class="role-hl">${r.headline}</p>
+              <ul class="role-bullets">${r.bullets.map(b => `<li>${b}</li>`).join("")}</ul>
+              <button class="btn btn-outline" type="button" data-open-role="${r.id}">Read Full Case Study →</button>
+            </div>
+            <div class="ba-panel">
+              <div class="eyebrow muted" style="margin-bottom:14px;">Verified Commercial &amp; Ops Proof</div>
+              ${r.bars.map(b => `
+                <div class="ba-row">
+                  <div class="ba-top">
+                    <span class="ba-name">${b.name}</span>
+                    <span class="ba-val tabular ${b.coral ? "coral" : ""}">${b.val}</span>
+                  </div>
+                  <div class="ba-track"><div class="ba-fill ${b.coral ? "coral" : ""}" style="width:${b.pct}%"></div></div>
+                  <div class="ba-sub">${b.sub}</div>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        </article>
+      `).join("");
+
+      // Freeing AM Time & Outsource/Automation Systems
+      const autoSystems = [
+        {
+          id: "ai-am-assistant",
+          tag: "AI WORKFLOW · STANDALONE PROJECT",
+          metric: "20–40h/wk",
+          sub: "freed per Account Manager",
+          title: "AI Account Manager Assistant",
+          desc: "Bottom-80% SMB accounts consume 60–70% of AM time on manual data pulls and routine replies. Built an AI workflow pulling Salesforce, Looker, and SQL data to automate account diagnostics, reporting, and draft partner messages.",
+          stack: "Claude · Salesforce · Looker · SQL",
+          full: "Designed around real daily SMB Account Manager workflows across ~4,000 partners. Automates pre-call diagnostics, churn risk flags, and draft partner communication so AMs redirect 20–40 hours/week into high-margin commercial negotiations and upsell."
+        },
+        {
+          id: "account-router",
+          tag: "PORTFOLIO GOVERNANCE · v4 ACTIVE",
+          metric: "~4,000",
+          sub: "accounts balanced automatically",
+          title: "SMB Account Mapping & Routing Engine",
+          desc: "Replaced error-prone manual Excel reassignments with a configurable tiering and capacity web app balancing ~440 partners per AM before syncing to Salesforce.",
+          stack: "Apps Script · JavaScript · Salesforce",
+          full: "Ensures high-GMV accounts are never starved by bottom-80% noise. Managers configure capacity thresholds and tiering logic, preview balanced books, and eliminate days of manual spreadsheet triage every quarter."
+        },
+        {
+          id: "bpo-deflection",
+          tag: "OUTSOURCING & SELF-SERVE DEFLECTION",
+          metric: "60K+/mo",
+          sub: "self-serve visits + 10-agent BPO",
+          title: "BPO Delegation & One-to-Many Partner Enablement",
+          desc: "Offloaded repetitive frontline ticket handling to structured BPO teams (10 outsourced agents at Paystack) and scaled partner education through Glovo Partner Academies (100+ partners) and a 60K+/mo Help Centre.",
+          stack: "BPO SLAs · Help Centre · Partner Academies",
+          full: "Combines human outsourcing (clear QA rubrics, escalation protocols, SLA accountability) with one-to-many self-serve systems (Help Centres, automated onboarding cutting friction 40% at Stitch, and Partner Academies) so senior AMs never become glorified support agents."
+        },
+        {
+          id: "live-kpi-recon",
+          tag: "AUTOMATED REPORTING & RECONCILIATION",
+          metric: "5,000+",
+          sub: "partners monitored in real time",
+          title: "Automated KPI Dashboards & Fraud Reconciliation Apps",
+          desc: "Eliminated manual weekly reporting and spreadsheet wallet checks by shipping Google Apps Script + BigQuery dashboards across 5,000+ partners and OCR-verified daily reconciliation tools.",
+          stack: "BigQuery · Google Apps Script · OCR",
+          full: "Gives AMs, Team Leads, and leadership live visibility into cancellations, uptime, prep time, ads pacing, and financial variances without waiting on analysts or burning hours copying CSVs."
+        }
+      ];
+
+      document.getElementById("autoGrid").innerHTML = autoSystems.map(s => `
+        <button class="auto-card" type="button" data-open-auto="${s.id}">
+          <div>
+            <div class="auto-top">
+              <span class="eyebrow">${s.tag}</span>
+              <div>
+                <div class="auto-metric tabular">${s.metric}</div>
+                <div class="auto-sub">${s.sub}</div>
+              </div>
+            </div>
+            <div class="auto-title">${s.title}</div>
+            <p class="auto-desc">${s.desc}</p>
+          </div>
+          <div class="auto-foot">
+            <span>${s.stack}</span>
+            <span style="color:var(--ink);font-weight:700;">Inspect →</span>
+          </div>
+        </button>
+      `).join("");
+
+      // Essays
+      document.getElementById("essaysList").innerHTML = D.essays.map(e => `
+        <button class="essay-row" type="button" data-open-essay="${e.id}">
+          <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">${e.index}</span>
+          <div>
+            <div style="font-family:var(--display);font-weight:700;font-size:17px;margin-bottom:3px;color:var(--ink);">${e.title}</div>
+            <div style="font-size:14px;color:var(--muted);">${e.excerpt}</div>
+          </div>
+          <span style="font-family:var(--mono);font-size:11px;color:var(--green);white-space:nowrap;">${e.readTime} →</span>
+        </button>
+      `).join("");
+
+      // Interruptible Draggable Sheet
+      const backdrop = document.getElementById("sheetBackdrop");
+      const sheet = document.getElementById("sheet");
+      const sheetHandle = document.getElementById("sheetHandle");
+      const sheetEyebrow = document.getElementById("sheetEyebrow");
+      const sheetBody = document.getElementById("sheetBody");
+
+      function openSheet(eyebrow, html) {
+        sheetEyebrow.textContent = eyebrow;
+        sheetBody.innerHTML = html;
+        sheetBody.scrollTop = 0;
+        sheet.style.transform = "";
+        backdrop.classList.add("open");
+        backdrop.setAttribute("aria-hidden", "false");
+        document.body.classList.add("sheet-open");
+      }
+      function closeSheet() {
+        backdrop.classList.remove("open");
+        backdrop.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("sheet-open");
+        sheet.style.transform = "";
+      }
+
+      document.addEventListener("click", (e) => {
+        const rBtn = e.target.closest("[data-open-role]");
+        if (rBtn) {
+          const r = D.roles.find(x => x.id === rBtn.dataset.openRole);
+          if (!r) return;
+          openSheet(`${r.company} · ${r.period}`, `
+            <h3 style="font-family:var(--display);font-weight:900;font-size:24px;line-height:1.18;margin:0 0 8px;">${r.headline}</h3>
+            <div style="font-size:14px;font-weight:700;color:var(--green);margin-bottom:18px;">${r.role}</div>
+            <div class="eyebrow muted" style="margin:18px 0 6px;">The Bottleneck</div>
+            <p style="margin:0;color:var(--ink-2);">${r.caseStudy.bottleneck}</p>
+            <div class="eyebrow muted" style="margin:18px 0 6px;">What I Built</div>
+            <ul style="padding-left:18px;color:var(--ink-2);line-height:1.6;">${r.caseStudy.systemBuilt.map(i => `<li style="margin-bottom:6px;">${i}</li>`).join("")}</ul>
+            <div class="eyebrow muted" style="margin:18px 0 6px;">Verified Results</div>
+            <ul style="padding-left:18px;color:var(--ink-2);line-height:1.6;">${r.caseStudy.outcomes.map(i => `<li style="margin-bottom:6px;">${i}</li>`).join("")}</ul>
+          `);
+          return;
+        }
+        const aBtn = e.target.closest("[data-open-auto]");
+        if (aBtn) {
+          const s = autoSystems.find(x => x.id === aBtn.dataset.openAuto);
+          if (!s) return;
+          openSheet(s.tag, `
+            <h3 style="font-family:var(--display);font-weight:900;font-size:24px;margin:0 0 8px;">${s.title}</h3>
+            <div style="font-family:var(--display);font-weight:900;font-size:34px;color:var(--green);margin-bottom:4px;">${s.metric}</div>
+            <div class="eyebrow muted" style="margin-bottom:18px;">${s.sub} · ${s.stack}</div>
+            <p style="font-size:15px;line-height:1.68;color:var(--ink-2);">${s.desc}</p>
+            <p style="font-size:15px;line-height:1.68;color:var(--ink-2);">${s.full}</p>
+          `);
+          return;
+        }
+        const eBtn = e.target.closest("[data-open-essay]");
+        if (eBtn) {
+          const es = D.essays.find(x => x.id === eBtn.dataset.openEssay);
+          if (!es) return;
+          openSheet(`Essay ${es.index} · ${es.topic} · ${es.readTime}`, `
+            <h3 style="font-family:var(--display);font-weight:900;font-size:24px;line-height:1.18;margin:0 0 20px;">${es.title}</h3>
+            <div class="essay-prose">${es.paragraphs.map(p => p.startsWith("## ") ? `<h4>${p.slice(3)}</h4>` : `<p>${p}</p>`).join("")}</div>
+          `);
+        }
+      });
+
+      document.getElementById("sheetClose").addEventListener("click", closeSheet);
+      backdrop.addEventListener("click", (e) => { if (e.target === backdrop) closeSheet(); });
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeSheet(); });
+
+      // Pointer drag-to-dismiss with rubber-banding & velocity handoff (mobile)
+      let dragging = false, startY = 0, lastY = 0, lastT = 0, vel = 0, dy = 0;
+      const rb = (o, d = 280, c = 0.35) => (o * d * c) / (d + c * Math.abs(o));
+      sheetHandle.addEventListener("pointerdown", (e) => {
+        if (window.innerWidth >= 820) return;
+        dragging = true; startY = lastY = e.clientY; lastT = performance.now(); vel = 0; dy = 0;
+        sheet.classList.add("dragging"); sheetHandle.setPointerCapture(e.pointerId);
+      });
+      sheetHandle.addEventListener("pointermove", (e) => {
+        if (!dragging) return;
+        const now = performance.now();
+        vel = (e.clientY - lastY) / Math.max(1, now - lastT);
+        lastY = e.clientY; lastT = now;
+        const raw = e.clientY - startY;
+        dy = raw < 0 ? rb(raw) : raw;
+        sheet.style.transform = `translateY(${dy}px)`;
+      });
+      sheetHandle.addEventListener("pointerup", () => {
+        if (!dragging) return;
+        dragging = false; sheet.classList.remove("dragging");
+        if (dy > 110 || vel > 0.35) closeSheet(); else sheet.style.transform = "";
+      });
+
+      // Copy Head of AM Recruiter Pitch
+      const toastEl = document.getElementById("toast");
+      let tTimer;
+      const showToast = (msg) => {
+        toastEl.textContent = msg; toastEl.classList.add("show");
+        clearTimeout(tTimer); tTimer = setTimeout(() => toastEl.classList.remove("show"), 2600);
+      };
+      const headOfAmPitch = "Oluwatobi (Tobi) Fasipe — 360° Head of Account Management leader (8+ yrs across Glovo, Chowdeck, Stitch, Paystack/Stripe, and Management Consulting). Delivered 180%+ YoY revenue growth and a 110% QoQ monetization record at Glovo SMB while owning Partner Ops across 5,000+ partners (-50%+ cancellations). Built 20+ person teams with reporting Team Leads at Chowdeck (600 → 25,000+ daily deliveries in <18 mos; 90%+ recruitment cost cut), held 99% enterprise retention at Stitch, and protected $700K+/mo at Paystack (Associate PM + 40+ product releases + 10-agent BPO). Frees AM time with custom AI tooling (20–40 hrs/wk saved per AM). UK Global Talent Visa (no sponsorship required).";
+      document.getElementById("copyPitchBtn").addEventListener("click", async () => {
+        try { await navigator.clipboard.writeText(headOfAmPitch); showToast("Copied Head of AM executive pitch"); }
+        catch { showToast("Email fasipetobi@gmail.com"); }
+      });
+
+      renderPillarList();
+      renderPillarDetail(false);
+    })();
+  </script>
+</body>
+</html>

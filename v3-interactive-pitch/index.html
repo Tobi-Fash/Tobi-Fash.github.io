@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
+  <meta name="theme-color" content="#FAF8F3" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#141517" media="(prefers-color-scheme: dark)" />
+  <title>Tobi Fasipe — Interactive Executive Pitch</title>
+  <meta name="description" content="Oluwatobi (Tobi) Fasipe — Senior Commercial & Operations Leader across Glovo, Chowdeck, Stitch, and Paystack. Interactive chapter-by-chapter proof deck." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #FAF8F3;
+      --paper-2: #EFEAE0;
+      --ink: #161717;
+      --ink-2: #3D3A36;
+      --muted: #6F6A62;
+      --line: #E3DDD0;
+      --yellow: #F2CC38;
+      --green: #009B7C;
+      --coral: #E03A2F;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+      --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
+      --ui: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, sans-serif;
+      --display: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-text-size-adjust: 100%;
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--ui);
+      background: var(--paper);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px));
+    }
+
+    button, a {
+      touch-action: manipulation;
+      user-select: none;
+      -webkit-user-select: none;
+      font-family: inherit;
+    }
+
+    .tabular { font-variant-numeric: tabular-nums; }
+
+    /* Minimal Top Utility Bar */
+    .top-strip {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 40;
+      padding: calc(14px + env(safe-area-inset-top, 0px)) 24px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      pointer-events: none;
+    }
+    .top-chip {
+      pointer-events: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: rgba(250, 248, 243, 0.80);
+      backdrop-filter: blur(18px) saturate(180%);
+      -webkit-backdrop-filter: blur(18px) saturate(180%);
+      border: 1px solid rgba(22, 23, 23, 0.08);
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 12.5px;
+      font-weight: 700;
+      transition: transform 100ms var(--ease-out);
+    }
+    .top-chip:active { transform: scale(0.96); }
+
+    /* Alternating Chapter Patterns (glovo-slides-style + Apple Product Page) */
+    .chapter {
+      padding: 104px 24px 88px;
+      position: relative;
+    }
+    .chapter-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    /* Chapter 1: Hero Cover (100svh stable mobile height) */
+    .ch-cover {
+      min-height: 92svh;
+      display: flex;
+      align-items: center;
+      background: var(--paper);
+      padding-top: 120px;
+    }
+
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+
+    .cover-h1 {
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: clamp(2.5rem, 6.2vw, 4.9rem);
+      line-height: 1.02;
+      letter-spacing: -0.036em;
+      margin: 16px 0 24px;
+      max-width: 17ch;
+      text-wrap: balance;
+    }
+
+    .cover-sub {
+      font-size: clamp(1.08rem, 1.6vw, 1.3rem);
+      line-height: 1.55;
+      color: var(--ink-2);
+      max-width: 56ch;
+      margin: 0 0 32px;
+    }
+
+    .cover-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 44px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 0;
+      border-radius: 999px;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 110ms var(--ease-out), background 160ms ease;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-dark { background: var(--ink); color: var(--paper); }
+    .btn-light { background: #FFFFFF; color: var(--ink); border: 1px solid var(--line); }
+
+    .cover-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+      padding-top: 26px;
+      border-top: 1px solid var(--line);
+    }
+    .strip-k {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .strip-v {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--ink);
+    }
+
+    /* Chapter 2: Full-Width Highlight Band (glovo-slides-style) */
+    .ch-band {
+      background: var(--paper-2);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 72px 24px;
+      text-align: center;
+    }
+    .band-statement {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(1.5rem, 3.2vw, 2.55rem);
+      line-height: 1.22;
+      letter-spacing: -0.025em;
+      max-width: 30ch;
+      margin: 0 auto;
+    }
+    .band-statement .teal { color: var(--green); }
+
+    /* Chapter 3: Swipeable Before -> After Proof Deck (1:1 pointer + momentum projection) */
+    .ch-deck {
+      background: var(--ink);
+      color: var(--paper);
+    }
+    .deck-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .deck-h2 {
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin: 8px 0 0;
+    }
+    .deck-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .deck-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid rgba(250, 248, 243, 0.2);
+      background: rgba(250, 248, 243, 0.06);
+      color: var(--paper);
+      font-size: 18px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 100ms var(--ease-out), background 140ms ease;
+    }
+    .deck-btn:active { transform: scale(0.94); }
+    .deck-counter {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--yellow);
+      margin: 0 6px;
+    }
+
+    .deck-viewport {
+      overflow: hidden;
+      border-radius: 26px;
+      touch-action: pan-y;
+      cursor: grab;
+    }
+    .deck-viewport:active { cursor: grabbing; }
+
+    .deck-track {
+      display: flex;
+      transition: transform 420ms var(--ease-spring);
+      will-change: transform;
+    }
+    .deck-track.dragging { transition: none; }
+
+    .proof-slide {
+      flex: 0 0 100%;
+      background: #1F2124;
+      border: 1px solid rgba(250, 248, 243, 0.10);
+      border-radius: 26px;
+      padding: 40px 42px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .slide-company {
+      font-family: var(--mono);
+      font-size: 11.5px;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 10px;
+    }
+
+    .slide-hero-num {
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: clamp(3rem, 7vw, 5.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.045em;
+      color: #FFFFFF;
+      margin: 0 0 14px;
+    }
+
+    .slide-headline {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: clamp(1.2rem, 2vw, 1.55rem);
+      line-height: 1.28;
+      color: rgba(250, 248, 243, 0.92);
+      margin: 0 0 14px;
+    }
+
+    .slide-role {
+      font-size: 14px;
+      color: rgba(250, 248, 243, 0.65);
+      margin: 0;
+    }
+
+    .slide-receipts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .receipt-box {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 18px;
+    }
+    .receipt-v {
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: 26px;
+      color: var(--yellow);
+      letter-spacing: -0.03em;
+      margin-bottom: 6px;
+    }
+    .receipt-v.green { color: #00D4A8; }
+    .receipt-v.coral { color: #FF756B; }
+    .receipt-k {
+      font-size: 12.5px;
+      color: rgba(250, 248, 243, 0.78);
+      line-height: 1.4;
+    }
+
+    .deck-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 20px;
+    }
+    .dot-btn {
+      height: 8px;
+      width: 8px;
+      border-radius: 999px;
+      border: 0;
+      padding: 0;
+      background: rgba(250, 248, 243, 0.25);
+      cursor: pointer;
+      transition: width 260ms var(--ease-out), background 200ms ease;
+    }
+    .dot-btn.active { width: 28px; background: var(--yellow); }
+
+    /* Chapter 4: Expandable iOS "Today" Cards for AI & Systems */
+    .today-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .today-card {
+      background: #FFFFFF;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 240px;
+      box-shadow: 0 8px 28px rgba(22, 23, 23, 0.04);
+      transition: transform 220ms var(--ease-out), box-shadow 220ms ease;
+    }
+    .today-card:active { transform: scale(0.98); }
+    @media (hover: hover) and (pointer: fine) {
+      .today-card:hover { transform: translateY(-4px); box-shadow: 0 18px 42px rgba(22, 23, 23, 0.09); }
+    }
+    .today-card.featured {
+      background: linear-gradient(155deg, #161717 0%, #232826 100%);
+      color: var(--paper);
+      border-color: transparent;
+    }
+
+    .today-big {
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: 38px;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin: 12px 0 6px;
+      color: var(--green);
+    }
+    .today-card.featured .today-big { color: var(--yellow); }
+
+    /* Chapter 5: Borderless 3-Column Capabilities (glovo-slides-style pattern) */
+    .ch-caps {
+      background: #FFFFFF;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .caps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 36px;
+      margin-top: 38px;
+    }
+    .cap-badge {
+      width: 56px;
+      height: 56px;
+      border-radius: 999px;
+      background: var(--paper-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--green);
+      margin-bottom: 16px;
+    }
+    .cap-title {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 18px;
+      margin: 0 0 8px;
+    }
+    .cap-body {
+      font-size: 14.5px;
+      color: var(--ink-2);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Chapter 6: Essays + Credentials + Dark Close */
+    .essay-strip {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .essay-card {
+      background: #FFFFFF;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 185px;
+      transition: transform 140ms var(--ease-out), border-color 160ms ease;
+    }
+    .essay-card:active { transform: scale(0.97); }
+    @media (hover: hover) and (pointer: fine) {
+      .essay-card:hover { border-color: var(--ink); transform: translateY(-2px); }
+    }
+
+    .ch-close {
+      background: var(--ink);
+      color: var(--paper);
+      text-align: center;
+      padding: 96px 24px 120px;
+    }
+    .close-h2 {
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: clamp(2rem, 4.8vw, 3.6rem);
+      line-height: 1.06;
+      letter-spacing: -0.035em;
+      max-width: 18ch;
+      margin: 14px auto 18px;
+    }
+    .close-creds {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 24px;
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: rgba(250, 248, 243, 0.72);
+      margin: 30px 0 34px;
+    }
+
+    /* Floating Dynamic-Island Navigation Pill */
+    .island-wrap {
+      position: fixed;
+      left: 50%;
+      bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+      transform: translateX(-50%);
+      z-index: 70;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .island-menu {
+      background: rgba(22, 23, 23, 0.90);
+      backdrop-filter: blur(22px) saturate(180%);
+      -webkit-backdrop-filter: blur(22px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 22px;
+      padding: 8px;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 4px;
+      transform-origin: bottom center;
+      transform: scale(0.92) translateY(8px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 220ms var(--ease-out), opacity 180ms ease;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    }
+    .island-wrap.expanded .island-menu {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .island-link {
+      color: rgba(250, 248, 243, 0.86);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 14px;
+      white-space: nowrap;
+      text-align: center;
+    }
+    .island-link:hover { background: rgba(255, 255, 255, 0.10); color: #FFFFFF; }
+
+    .island-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(22, 23, 23, 0.92);
+      color: var(--paper);
+      backdrop-filter: blur(22px) saturate(180%);
+      -webkit-backdrop-filter: blur(22px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      padding: 8px 10px 8px 16px;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.30);
+    }
+    .island-status {
+      border: 0;
+      background: transparent;
+      color: var(--paper);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 4px 6px;
+    }
+    .island-idx {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--yellow);
+    }
+    .island-cta {
+      background: var(--yellow);
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 7px 13px;
+      border-radius: 999px;
+      transition: transform 100ms var(--ease-out);
+    }
+    .island-cta:active { transform: scale(0.95); }
+
+    /* Modal Reader Sheet for Today Cards & Essays */
+    .modal-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      background: rgba(22, 23, 23, 0.52);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 220ms ease;
+    }
+    .modal-bg.open { opacity: 1; pointer-events: auto; }
+    .modal-card {
+      width: 100%;
+      max-width: 720px;
+      max-height: 86dvh;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      background: var(--paper);
+      color: var(--ink);
+      border-radius: 26px;
+      padding: 28px 30px 34px;
+      transform: scale(0.95) translateY(14px);
+      transition: transform 280ms var(--ease-out);
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.32);
+    }
+    .modal-bg.open .modal-card { transform: scale(1) translateY(0); }
+
+    /* Scroll reveal via clip-path (emil-design-eng) */
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 520ms var(--ease-out), transform 520ms var(--ease-out);
+    }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 960px) {
+      .cover-strip { grid-template-columns: repeat(2, 1fr); }
+      .proof-slide { grid-template-columns: 1fr; padding: 26px 22px; gap: 24px; }
+      .today-grid, .caps-grid { grid-template-columns: 1fr; }
+      .essay-strip { grid-template-columns: 1fr; }
+      .essay-card { min-height: auto; gap: 10px; }
+      .island-menu { grid-template-columns: repeat(2, auto); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      *, *::before, *::after { transition-duration: 120ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-strip">
+    <a class="top-chip" href="#ch-1">Tobi Fasipe</a>
+    <a class="top-chip" href="../index.html">← 3 Versions</a>
+  </div>
+
+  <!-- CHAPTER 1: COVER -->
+  <section class="chapter ch-cover" id="ch-1" data-chapter="01 / 06 · Thesis">
+    <div class="chapter-inner">
+      <div class="eyebrow">Commercial &amp; Operations Leader · Lagos / London · UK Global Talent Visa</div>
+      <h1 class="cover-h1">Massive scale in the hardest markets.</h1>
+      <p class="cover-sub">
+        Eight years building commercial engines, logistics networks, fintech risk controls, and internal AI software across <strong>Glovo (Delivery Hero)</strong>, <strong>Chowdeck</strong>, <strong>Stitch</strong>, and <strong>Paystack (Stripe)</strong>.
+      </p>
+      <div class="cover-actions">
+        <a class="btn btn-dark" href="#ch-3">Swipe the Proof Deck →</a>
+        <a class="btn btn-light" href="../assets/cv.html" target="_blank" rel="noopener">Open Executive CV</a>
+        <a class="btn btn-light" href="mailto:fasipetobi@gmail.com">fasipetobi@gmail.com</a>
+      </div>
+
+      <div class="cover-strip">
+        <div>
+          <div class="strip-k">Current Mandate</div>
+          <div class="strip-v">Glovo Nigeria (SMB Commercial + Partner Ops)</div>
+        </div>
+        <div>
+          <div class="strip-k">Target Level</div>
+          <div class="strip-v">Senior Manager · Director · VP · GM</div>
+        </div>
+        <div>
+          <div class="strip-k">Sectors</div>
+          <div class="strip-v">Marketplace · Fintech · SaaS · Software</div>
+        </div>
+        <div>
+          <div class="strip-k">Work Authorization</div>
+          <div class="strip-v">UK Global Talent (Zero Sponsorship)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 2: HIGHLIGHT STATEMENT BAND -->
+  <section class="ch-band" id="ch-2" data-chapter="02 / 06 · Thesis">
+    <p class="band-statement reveal">
+      <span class="teal">Find where the business leaks.</span> Build the system that stops it. Ship the software that makes it hold.
+    </p>
+  </section>
+
+  <!-- CHAPTER 3: INTERACTIVE BEFORE -> AFTER PROOF DECK -->
+  <section class="chapter ch-deck" id="ch-3" data-chapter="03 / 06 · Proof Deck">
+    <div class="chapter-inner">
+      <div class="deck-head">
+        <div>
+          <div class="eyebrow" style="color:var(--yellow);">Chapter 03 · Swipe or Use ← → Keys</div>
+          <h2 class="deck-h2">Four roles. Quantified leverage.</h2>
+        </div>
+        <div class="deck-controls">
+          <button class="deck-btn" id="prevSlide" aria-label="Previous role">←</button>
+          <span class="deck-counter tabular" id="slideCounter">01 / 04</span>
+          <button class="deck-btn" id="nextSlide" aria-label="Next role">→</button>
+        </div>
+      </div>
+
+      <div class="deck-viewport" id="deckViewport">
+        <div class="deck-track" id="deckTrack"></div>
+      </div>
+      <div class="deck-dots" id="deckDots"></div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 4: EXPANDABLE iOS "TODAY" CARDS — AI & SYSTEMS -->
+  <section class="chapter" id="ch-4" data-chapter="04 / 06 · AI & Systems">
+    <div class="chapter-inner">
+      <div class="eyebrow">Chapter 04 · AI-Native Builder Edge</div>
+      <h2 class="deck-h2" style="color:var(--ink);margin-top:8px;">I don’t wait in an engineering queue.</h2>
+      <p style="font-size:16px;color:var(--muted);max-width:60ch;margin:10px 0 0;">
+        Tap any card to expand the operational problem, system architecture, and business result.
+      </p>
+      <div class="today-grid" id="todayGrid"></div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 5: BORDERLESS 3-COLUMN CAPABILITIES -->
+  <section class="chapter ch-caps" id="ch-5" data-chapter="05 / 06 · Capabilities">
+    <div class="chapter-inner">
+      <div class="eyebrow">Chapter 05 · What You Get on Day One</div>
+      <h2 class="deck-h2" style="color:var(--ink);margin-top:8px;">Three capabilities under one seat.</h2>
+      <div class="caps-grid reveal">
+        <div>
+          <div class="cap-badge">01</div>
+          <h3 class="cap-title">Commercial &amp; Revenue Engines</h3>
+          <p class="cap-body">Own P&amp;L levers, pricing, ads monetization (422 → 1,056 SMB advertisers at Glovo), enterprise expansion (+5% top-tier lift &amp; 99% retention at Stitch), and new growth formats (+200% dark-kitchen orders).</p>
+        </div>
+        <div>
+          <div class="cap-badge">02</div>
+          <h3 class="cap-title">0→1 Marketplace &amp; Fintech Ops</h3>
+          <p class="cap-body">Build functions with no predecessor: 5,000+ Partner Ops backbone (-50%+ cancellations), 80 → 5,000+ riders at 85–90% 1-hr SLA (-95% CAC), and multi-market risk controls ($700K+/mo protected, South Africa launch).</p>
+        </div>
+        <div>
+          <div class="cap-badge">03</div>
+          <h3 class="cap-title">SQL, BigQuery &amp; AI Tooling</h3>
+          <p class="cap-body">Ship production internal apps and AI workflows — saving 20–40 hrs/wk per AM, automating 4,000-account routing, and eliminating picker wallet fraud with OCR &amp; BigQuery reconciliation.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:64px;">
+        <div class="eyebrow">Five Original Essays · Tap to Read</div>
+        <div class="essay-strip" id="essayStrip"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 6: DARK CLOSE -->
+  <section class="ch-close" id="ch-6" data-chapter="06 / 06 · Contact">
+    <div class="chapter-inner">
+      <div class="eyebrow" style="color:var(--yellow);">Chapter 06 · Next Mandate</div>
+      <h2 class="close-h2">Let’s build your next stage of scale.</h2>
+      <div class="close-creds">
+        <span>UK Global Talent Visa (No Sponsorship)</span>
+        <span>·</span>
+        <span>Glovo Innovation Champion ’25</span>
+        <span>·</span>
+        <span>Angel Investor: Chowdeck · GoLemon · Billingrails · Varsi</span>
+        <span>·</span>
+        <span>Henley MBA &amp; Founders Connect Speaker</span>
+      </div>
+      <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:12px;">
+        <a class="btn" style="background:var(--yellow);color:var(--ink);" href="mailto:fasipetobi@gmail.com">Email fasipetobi@gmail.com</a>
+        <a class="btn" style="background:rgba(255,255,255,0.10);color:var(--paper);" href="https://www.linkedin.com/in/tobifasipe" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn" style="background:rgba(255,255,255,0.10);color:var(--paper);" href="../assets/cv.html" target="_blank" rel="noopener">Executive CV ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Dynamic-Island Pill -->
+  <div class="island-wrap" id="islandWrap">
+    <div class="island-menu" id="islandMenu">
+      <a class="island-link" href="#ch-1">01 Thesis</a>
+      <a class="island-link" href="#ch-3">03 Proof Deck</a>
+      <a class="island-link" href="#ch-4">04 AI Systems</a>
+      <a class="island-link" href="#ch-5">05 Essays</a>
+      <a class="island-link" href="#ch-6">06 Contact</a>
+      <a class="island-link" href="../assets/cv.html" target="_blank" rel="noopener">Open CV ↗</a>
+    </div>
+    <div class="island-pill">
+      <button class="island-status" id="islandToggle" type="button" aria-expanded="false">
+        <span class="island-idx tabular" id="islandIdx">01 / 06</span>
+        <span id="islandLabel">Thesis</span>
+        <span style="opacity:0.55;font-size:10px;">▲</span>
+      </button>
+      <a class="island-cta" href="mailto:fasipetobi@gmail.com">Contact</a>
+    </div>
+  </div>
+
+  <!-- Expandable Modal for Today Cards & Essays -->
+  <div class="modal-bg" id="modalBg" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span class="eyebrow" id="modalEyebrow">Detail</span>
+        <button class="btn btn-light" id="modalClose" style="padding:6px 14px;font-size:12.5px;" type="button">Close</button>
+      </div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="../shared/data.js"></script>
+  <script>
+    (function () {
+      const D = window.TOBI_DATA;
+
+      // Render Swipeable Proof Slides
+      const deckTrack = document.getElementById("deckTrack");
+      const deckDots = document.getElementById("deckDots");
+      const slideCounter = document.getElementById("slideCounter");
+      const heroMap = { glovo: "5,000+", chowdeck: "14×", stitch: "99%", paystack: "-86%" };
+
+      deckTrack.innerHTML = D.roles.map(r => `
+        <article class="proof-slide">
+          <div>
+            <div class="slide-company">${r.company} · ${r.period}</div>
+            <div class="slide-hero-num tabular">${heroMap[r.id]}</div>
+            <h3 class="slide-headline">${r.headline}</h3>
+            <p class="slide-role">${r.role}</p>
+            <p style="font-size:14px;color:rgba(250,248,243,0.74);line-height:1.6;margin:14px 0 0;">${r.summary}</p>
+          </div>
+          <div class="slide-receipts">
+            ${r.kpis.map(k => `
+              <div class="receipt-box">
+                <div class="receipt-v tabular ${k.tone}">${k.num}</div>
+                <div class="receipt-k">${k.label}</div>
+              </div>
+            `).join("")}
+          </div>
+        </article>
+      `).join("");
+
+      deckDots.innerHTML = D.roles.map((r, i) => `
+        <button class="dot-btn ${i === 0 ? "active" : ""}" data-slide="${i}" aria-label="Go to ${r.company}"></button>
+      `).join("");
+
+      let idx = 0;
+      const total = D.roles.length;
+
+      function goSlide(next) {
+        idx = Math.max(0, Math.min(total - 1, next));
+        deckTrack.style.transform = `translateX(${-idx * 100}%)`;
+        slideCounter.textContent = `0${idx + 1} / 0${total}`;
+        deckDots.querySelectorAll(".dot-btn").forEach((b, i) => b.classList.toggle("active", i === idx));
+      }
+
+      document.getElementById("prevSlide").addEventListener("click", () => goSlide(idx - 1));
+      document.getElementById("nextSlide").addEventListener("click", () => goSlide(idx + 1));
+      deckDots.addEventListener("click", (e) => {
+        const b = e.target.closest("[data-slide]");
+        if (b) goSlide(Number(b.dataset.slide));
+      });
+
+      // Keyboard ← / → navigation (simoskill-glovo-deck)
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight") goSlide(idx + 1);
+        else if (e.key === "ArrowLeft") goSlide(idx - 1);
+        else if (e.key === "Escape") closeModal();
+      });
+
+      // 1:1 Pointer Tracking + Apple Momentum Projection + Rubber-Banding
+      const viewport = document.getElementById("deckViewport");
+      let dragging = false, startX = 0, lastX = 0, lastT = 0, vel = 0, dx = 0;
+      function project(v, d = 0.994) { return (v * d) / (1 - d); }
+      function rubberband(o, dim = 320, c = 0.45) { return (o * dim * c) / (dim + c * Math.abs(o)); }
+
+      viewport.addEventListener("pointerdown", (e) => {
+        dragging = true;
+        startX = lastX = e.clientX;
+        lastT = performance.now();
+        vel = 0; dx = 0;
+        deckTrack.classList.add("dragging");
+        viewport.setPointerCapture(e.pointerId);
+      });
+      viewport.addEventListener("pointermove", (e) => {
+        if (!dragging) return;
+        const now = performance.now();
+        const dt = Math.max(1, now - lastT);
+        vel = (e.clientX - lastX) / dt; // px/ms
+        lastX = e.clientX; lastT = now;
+        const raw = e.clientX - startX;
+        const atStart = idx === 0 && raw > 0;
+        const atEnd = idx === total - 1 && raw < 0;
+        dx = (atStart || atEnd) ? rubberband(raw) : raw;
+        const basePx = -idx * viewport.clientWidth;
+        deckTrack.style.transform = `translateX(${basePx + dx}px)`;
+      });
+      viewport.addEventListener("pointerup", () => {
+        if (!dragging) return;
+        dragging = false;
+        deckTrack.classList.remove("dragging");
+        const projected = dx + project(vel);
+        const thresh = viewport.clientWidth * 0.22;
+        if (projected < -thresh && idx < total - 1) goSlide(idx + 1);
+        else if (projected > thresh && idx > 0) goSlide(idx - 1);
+        else goSlide(idx);
+      });
+
+      // Render Today Cards (AI & Systems)
+      document.getElementById("todayGrid").innerHTML = D.systemsBuilt.map((s, i) => `
+        <button class="today-card ${i === 0 ? "featured" : ""}" type="button" data-today="${s.id}">
+          <div>
+            <div class="eyebrow" style="${i === 0 ? "color:var(--yellow);" : ""}">${s.tag}</div>
+            <div class="today-big tabular">${s.headlineMetric}</div>
+            <div style="font-family:var(--mono);font-size:11px;opacity:0.7;margin-bottom:14px;">${s.headlineSub}</div>
+            <div style="font-family:var(--display);font-weight:800;font-size:20px;line-height:1.2;margin-bottom:8px;">${s.title}</div>
+            <p style="font-size:14px;opacity:0.82;line-height:1.55;margin:0;">${s.problem}</p>
+          </div>
+          <div style="font-family:var(--mono);font-size:11.5px;margin-top:18px;opacity:0.85;">
+            Tap to expand case study →
+          </div>
+        </button>
+      `).join("");
+
+      // Render 5 Essay Cards
+      document.getElementById("essayStrip").innerHTML = D.essays.map(e => `
+        <button class="essay-card" type="button" data-essay="${e.id}">
+          <div>
+            <div class="eyebrow" style="margin-bottom:8px;">${e.index} · ${e.topic}</div>
+            <div style="font-family:var(--display);font-weight:800;font-size:14.5px;line-height:1.3;color:var(--ink);">${e.title}</div>
+          </div>
+          <div style="font-family:var(--mono);font-size:11px;color:var(--muted);">${e.readTime} →</div>
+        </button>
+      `).join("");
+
+      // Modal Reader
+      const modalBg = document.getElementById("modalBg");
+      const modalEyebrow = document.getElementById("modalEyebrow");
+      const modalBody = document.getElementById("modalBody");
+      function openModal(eyebrow, html) {
+        modalEyebrow.textContent = eyebrow;
+        modalBody.innerHTML = html;
+        modalBg.classList.add("open");
+        modalBg.setAttribute("aria-hidden", "false");
+      }
+      function closeModal() {
+        modalBg.classList.remove("open");
+        modalBg.setAttribute("aria-hidden", "true");
+      }
+
+      document.addEventListener("click", (e) => {
+        const tCard = e.target.closest("[data-today]");
+        if (tCard) {
+          const s = D.systemsBuilt.find(x => x.id === tCard.dataset.today);
+          if (!s) return;
+          openModal(s.tag, `
+            <h3 style="font-family:var(--display);font-weight:900;font-size:24px;margin:0 0 8px;">${s.title}</h3>
+            <div style="font-family:var(--display);font-weight:900;font-size:34px;color:var(--green);margin-bottom:4px;">${s.headlineMetric}</div>
+            <div style="font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-bottom:18px;">${s.headlineSub} · ${s.stack.join(" · ")}</div>
+            <p style="font-size:15px;line-height:1.68;color:var(--ink-2);"><strong>Problem:</strong> ${s.problem}</p>
+            <p style="font-size:15px;line-height:1.68;color:var(--ink-2);"><strong>Architecture:</strong> ${s.solution}</p>
+            <p style="font-size:15px;line-height:1.68;color:var(--ink-2);"><strong>Outcome:</strong> ${s.impact}</p>
+          `);
+          return;
+        }
+        const eCard = e.target.closest("[data-essay]");
+        if (eCard) {
+          const es = D.essays.find(x => x.id === eCard.dataset.essay);
+          if (!es) return;
+          openModal(`Essay ${es.index} · ${es.topic} · ${es.readTime}`, `
+            <h3 style="font-family:var(--display);font-weight:900;font-size:24px;line-height:1.18;margin:0 0 20px;">${es.title}</h3>
+            ${es.paragraphs.map(p => p.startsWith("## ")
+              ? `<h4 style="font-family:var(--display);font-weight:800;font-size:18px;margin:22px 0 8px;">${p.slice(3)}</h4>`
+              : `<p style="font-size:15.5px;line-height:1.72;color:var(--ink-2);margin:0 0 14px;">${p}</p>`).join("")}
+          `);
+        }
+      });
+
+      document.getElementById("modalClose").addEventListener("click", closeModal);
+      modalBg.addEventListener("click", (e) => { if (e.target === modalBg) closeModal(); });
+
+      // Dynamic Island Pill toggle + IntersectionObserver chapter tracking
+      const islandWrap = document.getElementById("islandWrap");
+      const islandToggle = document.getElementById("islandToggle");
+      const islandIdx = document.getElementById("islandIdx");
+      const islandLabel = document.getElementById("islandLabel");
+
+      islandToggle.addEventListener("click", () => {
+        const exp = islandWrap.classList.toggle("expanded");
+        islandToggle.setAttribute("aria-expanded", String(exp));
+      });
+      document.getElementById("islandMenu").addEventListener("click", () => {
+        islandWrap.classList.remove("expanded");
+        islandToggle.setAttribute("aria-expanded", "false");
+      });
+
+      const chapters = document.querySelectorAll("[data-chapter]");
+      const chObs = new IntersectionObserver((entries) => {
+        entries.forEach(en => {
+          if (en.isIntersecting) {
+            const parts = en.target.dataset.chapter.split(" · ");
+            islandIdx.textContent = parts[0];
+            islandLabel.textContent = parts[1] || "";
+          }
+        });
+      }, { threshold: 0.45 });
+      chapters.forEach(c => chObs.observe(c));
+
+      const revObs = new IntersectionObserver((entries) => {
+        entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); revObs.unobserve(en.target); } });
+      }, { threshold: 0.2 });
+      document.querySelectorAll(".reveal").forEach(el => revObs.observe(el));
+    })();
+  </script>
+</body>
+</html>
